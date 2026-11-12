@@ -106,10 +106,10 @@ def iter_runs(parts, sets, start):
     end = day + timedelta(days=366 * 8)
     while day <= end:
         if day.month in sets[3]:
-            a = day.day in sets[2]
-            b ((day.weekday() + 1) % 7) in sets[4] if False else None
-            b = ((day.weekday() + 1) % 7) in sets[4]
-            ok = (a and b) if (dom_star or dow_star) else (a or b)
+            in_dom = day.day in sets[2]
+            in_dow = ((day.weekday() + 1) % 7) in sets[4]
+            # classic cron: if both day fields are restricted, either one may match
+            ok = (in_dom and in_dow) if (dom_star or dow_star) else (in_dom or in_dow)
             if ok:
                 for h in hrs:
                     for m in mins:
