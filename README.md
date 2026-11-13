@@ -1,4 +1,6 @@
 <p align="center">
+
+<p align="center"><img src="assets/readme-banner.svg" alt="Animated CronWhy schedule banner" width="100%"></p>
   <img src="assets/banner.svg" alt="cronwhy" width="100%">
 </p>
 
